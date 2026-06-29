@@ -15,13 +15,13 @@ export default function InspirationGallery() {
     },
     {
       title: 'Master Bedroom',
-      image: '/images/WhatsApp Image 2026-06-11 at 5.30.25 PM.jpeg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.28 PM (1).jpeg',
       href: '/services/master-bedroom',
       span: 'md:col-span-1 md:row-span-1'
     },
     {
       title: 'False Ceiling',
-      image: '/images/WhatsApp Image 2026-06-11 at 5.30.28 PM (2).jpeg',
+      image: 'https://images.pexels.com/photos/37982071/pexels-photo-37982071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       href: '/services/false-ceilings',
       span: 'md:col-span-1 md:row-span-1'
     },
@@ -33,7 +33,7 @@ export default function InspirationGallery() {
     },
     {
       title: 'Wardrobe',
-      image: '/images/WhatsApp Image 2026-06-11 at 5.30.26 PM (2).jpeg',
+      image: 'https://images.pexels.com/photos/35189675/pexels-photo-35189675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       href: '/services/custom-wardrobes',
       span: 'md:col-span-1 md:row-span-1'
     },

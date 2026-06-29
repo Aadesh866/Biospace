@@ -200,7 +200,7 @@ const Header = () => {
         onMouseEnter={() => setIsMegaMenuOpen(true)}
         onMouseLeave={() => setIsMegaMenuOpen(false)}
       >
-        <MegaMenu isOpen={isMegaMenuOpen} />
+        <MegaMenu isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
       </div>
     </header>
   )

@@ -7,12 +7,11 @@ const megaMenuData = {
   columns: [
     [
       {
-        title: 'Residential',
+        title: 'Core Services',
         links: [
           { name: 'Modular Kitchens', href: '/services/modular-kitchens' },
           { name: 'Custom Wardrobes', href: '/services/custom-wardrobes' },
           { name: 'Living Room Design', href: '/services/living-room' },
-          { name: 'Master Bedroom', href: '/services/master-bedroom' },
         ],
       },
     ],
@@ -21,38 +20,15 @@ const megaMenuData = {
         title: 'Specialized',
         links: [
           { name: 'False Ceilings', href: '/services/false-ceilings' },
-          { name: 'TV Unit & Storage', href: '/services/tv-units' },
-          { name: 'Study Room', href: '/services/study-room' },
-          { name: 'Kids Room', href: '/services/kids-room' },
-        ],
-      },
-    ],
-    [
-      {
-        title: 'Commercial',
-        links: [
-          { name: 'Commercial Interiors', href: '/services/commercial-interiors' },
-          { name: 'Office Design', href: '/services/office-design' },
-          { name: 'Retail Spaces', href: '/services/retail-spaces' },
-          { name: 'Restaurant Design', href: '/services/restaurant-design' },
-        ],
-      },
-    ],
-    [
-      {
-        title: 'Complete Solutions',
-        links: [
           { name: 'Complete Renovation', href: '/services/complete-renovation' },
-          { name: '2 BHK Package', href: '/services/2-bhk-package' },
-          { name: '3 BHK Package', href: '/services/3-bhk-package' },
-          { name: 'Luxury Interiors', href: '/services/luxury-interiors' },
+          { name: 'Commercial Interiors', href: '/services/commercial-interiors' },
         ],
       },
     ],
   ],
 }
 
-export function MegaMenu({ isOpen }: { isOpen: boolean }) {
+export function MegaMenu({ isOpen, onClose }: { isOpen: boolean, onClose?: () => void }) {
   return (
     <div
       className={`fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] pointer-events-none z-50 flex justify-center ${
@@ -61,9 +37,11 @@ export function MegaMenu({ isOpen }: { isOpen: boolean }) {
     >
       {/* Background Blur */}
       <div
-        className={`absolute inset-0 bg-brand-gray-900/10 backdrop-blur-[2px] transition-opacity duration-300 pointer-events-none ${
-          isOpen ? 'opacity-100' : 'opacity-0'
+        className={`absolute inset-0 bg-brand-gray-900/10 backdrop-blur-[2px] transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
+        onMouseEnter={onClose}
+        onClick={onClose}
       />
 
       {/* Menu Container */}
@@ -75,7 +53,7 @@ export function MegaMenu({ isOpen }: { isOpen: boolean }) {
         {/* White Card */}
         <div className="bg-white rounded-b-xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] ring-1 ring-gray-200/50 py-4 max-h-[80vh] overflow-y-auto overscroll-contain">
           {/* Columns Layout */}
-          <div className="grid grid-cols-4 divide-x divide-gray-100">
+          <div className="grid grid-cols-2 divide-x divide-gray-100">
             {megaMenuData.columns.map((column, colIdx) => (
               <div key={colIdx} className="flex flex-col gap-3 px-6 first:pl-8 last:pr-8">
                 {column.map((section) => (

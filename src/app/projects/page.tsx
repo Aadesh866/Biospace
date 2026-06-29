@@ -279,7 +279,7 @@ export default function ProjectsPage() {
                     </div>
                     
                     <Button variant="outline" className="w-full hover:bg-brand-orange-500 hover:text-white hover:border-brand-orange-500 transition-colors" size="sm" asChild>
-                      <Link href={`/projects/${project.id}`}>View Details</Link>
+                      <Link href="/contact">REQUEST QUOTE</Link>
                     </Button>
                   </div>
                 </motion.div>

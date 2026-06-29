@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -12,31 +12,35 @@ export default function HeroSection() {
   
   const slides = [
     {
-      image: '/images/WhatsApp Image 2026-06-11 at 5.30.18 PM.jpeg',
+      type: 'video',
+      src: '/videos/combination of 2 vids....mp4',
       title: 'Your Dream Home, Delivered in Under a Week',
       subtitle: 'Premium interior design with 30-year warranty on kitchens',
       highlight: '24-48 Hour Site Visits'
     },
     {
-      image: '/images/WhatsApp Image 2026-06-11 at 5.30.19 PM.jpeg',
+      type: 'video',
+      src: '/videos/header video 1.mp4',
       title: 'Modular Kitchens That Last Decades',
       subtitle: 'German hardware and premium materials with unmatched 30-year warranty',
       highlight: '30 Year Kitchen Warranty'
-    },
-    {
-      image: '/images/WhatsApp Image 2026-06-11 at 5.34.17 PM.jpeg',
-      title: 'Complete Home Makeovers',
-      subtitle: 'From modular kitchens to full renovations - we handle everything A to Z',
-      highlight: 'End-to-End Solutions'
     }
   ]
 
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [slides.length])
+    videoRefs.current.forEach((vid, idx) => {
+      if (vid) {
+        if (idx === currentSlide) {
+          vid.currentTime = 0;
+          vid.play().catch(() => {});
+        } else {
+          vid.pause();
+        }
+      }
+    })
+  }, [currentSlide])
 
   const trustIndicators = [
     {
@@ -69,14 +73,25 @@ export default function HeroSection() {
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              className="object-cover"
-              priority={index === 0}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10" />
+            {slide.type === 'video' ? (
+              <video
+                ref={(el) => { videoRefs.current[index] = el }}
+                src={slide.src}
+                muted
+                playsInline
+                onEnded={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+                className="object-cover w-full h-full"
+              />
+            ) : (
+              <Image
+                src={slide.src!}
+                alt={slide.title}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent" />
           </div>
         ))}
       </div>
