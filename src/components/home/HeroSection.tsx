@@ -14,6 +14,7 @@ export default function HeroSection() {
     {
       type: 'video',
       src: '/videos/combination of 2 vids....mp4',
+      poster: '/images/WhatsApp Image 2026-06-11 at 5.30.19 PM.jpeg',
       title: 'Your Dream Home, Delivered in Under a Week',
       subtitle: 'Premium interior design with 30-year warranty on kitchens',
       highlight: '24-48 Hour Site Visits'
@@ -21,6 +22,7 @@ export default function HeroSection() {
     {
       type: 'video',
       src: '/videos/header video 1.mp4',
+      poster: '/images/WhatsApp Image 2026-06-11 at 5.30.18 PM.jpeg',
       title: 'Modular Kitchens That Last Decades',
       subtitle: 'German hardware and premium materials with unmatched 30-year warranty',
       highlight: '30 Year Kitchen Warranty'
@@ -63,7 +65,7 @@ export default function HeroSection() {
   const quickActions = []
 
   return (
-    <section className="relative min-h-[110vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[110vh] flex items-center justify-center overflow-hidden bg-brand-gray-900">
       {/* Background Slideshow */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -77,6 +79,8 @@ export default function HeroSection() {
               <video
                 ref={(el) => { videoRefs.current[index] = el }}
                 src={slide.src}
+                poster={slide.poster}
+                preload="auto"
                 muted
                 playsInline
                 onEnded={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
