@@ -12,25 +12,25 @@ export default function OneStopShopSection() {
     {
       title: 'Modular Interiors',
       description: 'Functional kitchen, wardrobe and storage',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Ra20705_kitchen_stainless_steel.JPG',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.20 PM.jpeg',
       href: '/services/modular-kitchens'
     },
     {
       title: 'Full Home Interiors',
       description: 'Turnkey interior solutions for your home',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.27 PM (1).jpeg',
       href: '/services/complete-renovation'
     },
     {
       title: 'Luxury Interiors',
       description: 'Tailored interiors that redefine elegance',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.34.17 PM (1).jpeg',
       href: '/services/luxury-interiors'
     },
     {
       title: 'Renovations',
       description: 'Expert solutions to upgrade your home',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.27 PM (2).jpeg',
       href: '/services/renovations'
     }
   ]
@@ -64,7 +64,7 @@ export default function OneStopShopSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Link href={category.href} className="group flex h-full">
-                <Card className="w-full flex flex-col border border-white/60 bg-white/40 backdrop-blur-md shadow-premium hover:shadow-premium-hover overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                <Card className="w-full flex flex-col border-2 border-brand-gray-200 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.15)] overflow-hidden transition-all duration-300 hover:-translate-y-2">
                   <div className="relative h-64 w-full overflow-hidden">
                     <Image
                       src={category.image}

@@ -7,9 +7,11 @@ import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { MegaMenu } from './MegaMenu'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
 
@@ -73,21 +75,45 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex flex-1 justify-center items-center space-x-8">
             {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'font-medium transition-all duration-300 hover:text-brand-orange-500 relative',
-                  pathname === item.href
-                    ? 'text-brand-orange-500'
-                    : 'text-brand-gray-700'
-                )}
-              >
-                {item.label}
-                {pathname === item.href && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-orange-500 rounded-full" />
-                )}
-              </Link>
+              item.label === 'Services' ? (
+                <div
+                  key={item.href}
+                  className="relative"
+                  onMouseEnter={() => setIsMegaMenuOpen(true)}
+                  onMouseLeave={() => setIsMegaMenuOpen(false)}
+                >
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      'font-medium transition-all duration-300 hover:text-brand-orange-500 relative',
+                      pathname === item.href || pathname.startsWith('/services/')
+                        ? 'text-brand-orange-500'
+                        : 'text-brand-gray-700'
+                    )}
+                  >
+                    {item.label}
+                    {(pathname === item.href || pathname.startsWith('/services/')) && (
+                      <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-orange-500 rounded-full" />
+                    )}
+                  </Link>
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    'font-medium transition-all duration-300 hover:text-brand-orange-500 relative',
+                    pathname === item.href
+                      ? 'text-brand-orange-500'
+                      : 'text-brand-gray-700'
+                  )}
+                >
+                  {item.label}
+                  {pathname === item.href && (
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-orange-500 rounded-full" />
+                  )}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -167,6 +193,14 @@ const Header = () => {
             </nav>
           </div>
         )}
+      </div>
+
+      {/* Mega Menu */}
+      <div
+        onMouseEnter={() => setIsMegaMenuOpen(true)}
+        onMouseLeave={() => setIsMegaMenuOpen(false)}
+      >
+        <MegaMenu isOpen={isMegaMenuOpen} />
       </div>
     </header>
   )

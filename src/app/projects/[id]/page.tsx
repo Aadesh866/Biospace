@@ -14,13 +14,13 @@ const projectDataMap: Record<string, any> = {
     duration: '8 Days',
     budget: '₹12.5 Lakhs',
     area: '1200 sq ft',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+    image: '/images/WhatsApp Image 2026-06-11 at 5.30.21 PM.jpeg',
     description: 'A complete transformation of an outdated 3 BHK apartment into a modern, minimalist haven. We completely overhauled the kitchen, added custom wardrobes to all three bedrooms, and created a stunning false ceiling design with ambient LED lighting.',
     features: ['Modular Kitchen with Island', 'Master Bedroom Wardrobe', 'False Ceiling with LED Lights', 'Premium Wooden Flooring', 'Complete Painting'],
     gallery: [
-      'https://upload.wikimedia.org/wikipedia/commons/0/05/Ra20705_kitchen_stainless_steel.JPG',
-      'https://upload.wikimedia.org/wikipedia/commons/2/26/PAX_wardrobe_at_IKEA_Xihongmen_%2820150423113022%29.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg'
+      '/images/WhatsApp Image 2026-06-11 at 5.30.23 PM (1).jpeg',
+      '/images/WhatsApp Image 2026-06-11 at 5.30.24 PM.jpeg',
+      '/images/WhatsApp Image 2026-06-11 at 5.30.26 PM (2).jpeg'
     ]
   },
   'featured': {
@@ -29,13 +29,13 @@ const projectDataMap: Record<string, any> = {
     duration: '14 Days',
     budget: '₹28 Lakhs',
     area: '3200 sq ft',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
+    image: '/images/WhatsApp Image 2026-06-11 at 5.34.17 PM (1).jpeg',
     description: 'An ultra-premium interior execution for a 4 BHK penthouse. The project featured imported Italian marble, a state-of-the-art smart modular kitchen, walk-in closets for the master suite, and custom-designed furniture pieces.',
     features: ['Imported Italian Marble', 'Smart Kitchen Appliances', 'Walk-in Closets', 'Home Automation Integration', 'Custom Furniture'],
     gallery: [
-      'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg'
+      '/images/WhatsApp Image 2026-06-11 at 5.30.27 PM (2).jpeg',
+      '/images/WhatsApp Image 2026-06-11 at 5.30.25 PM (1).jpeg',
+      '/images/WhatsApp Image 2026-06-11 at 5.30.28 PM (1).jpeg'
     ]
   }
 }
@@ -50,12 +50,12 @@ export default function ProjectDetailPage() {
     duration: '7 Days Avg',
     budget: 'Contact for details',
     area: 'Custom',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
+    image: '/images/WhatsApp Image 2026-06-11 at 5.30.26 PM (1).jpeg',
     description: 'We executed this project with our signature speed and premium quality. Every detail was meticulously planned to ensure maximum functionality without compromising on aesthetics.',
     features: ['Custom Planning', 'Premium Materials', 'Speedy Execution', '10 Year Warranty'],
     gallery: [
-      'https://upload.wikimedia.org/wikipedia/commons/0/05/Ra20705_kitchen_stainless_steel.JPG',
-      'https://upload.wikimedia.org/wikipedia/commons/2/26/PAX_wardrobe_at_IKEA_Xihongmen_%2820150423113022%29.jpg'
+      '/images/WhatsApp Image 2026-06-11 at 5.30.27 PM.jpeg',
+      '/images/WhatsApp Image 2026-06-11 at 5.30.28 PM (2).jpeg'
     ]
   }
 

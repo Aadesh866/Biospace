@@ -39,7 +39,7 @@ export default function AboutPage() {
               className="w-full lg:w-1/2 relative h-[600px] rounded-3xl overflow-hidden shadow-premium group"
             >
               <Image 
-                src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg"
+                src="/images/WhatsApp Image 2026-06-11 at 5.30.23 PM (1).jpeg"
                 alt="Our Studio"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-1000"

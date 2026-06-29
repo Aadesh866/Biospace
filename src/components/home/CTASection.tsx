@@ -139,7 +139,7 @@ const CTASection = () => {
   ]
 
   return (
-    <section className="section-padding bg-brand-gray-50">
+    <section className="section-padding bg-brand-gray-100">
       <div className="container">
         {/* Main CTA Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
@@ -417,7 +417,7 @@ const CTASection = () => {
                   size="lg" 
                   variant="outline"
                   asChild
-                  className="border-white text-white hover:bg-white hover:text-brand-gray-900 font-semibold text-lg px-8 py-4"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-gray-900 font-semibold text-lg px-8 py-4"
                 >
                   <a 
                     href="https://wa.me/919876543210?text=I%20want%20to%20book%20a%20priority%20consultation%20this%20month"

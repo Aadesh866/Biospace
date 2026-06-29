@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { MapPin, Clock, IndianRupee, Filter } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { getImageUrl, localImages } from '@/lib/image-config'
 
 export default function ProjectsPage() {
   const [selectedFilter, setSelectedFilter] = useState('all')
@@ -28,7 +29,7 @@ export default function ProjectsPage() {
       duration: '8 Days',
       budget: '₹12.5 Lakhs',
       area: '1200 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: getImageUrl('renovation', 0),
       description: 'Complete transformation of a 3 BHK apartment with modular kitchen, custom wardrobes, and living room redesign.',
       features: ['Modular Kitchen with Island', 'Master Bedroom Wardrobe', 'False Ceiling with LED Lights', 'Premium Wooden Flooring']
     },
@@ -40,7 +41,7 @@ export default function ProjectsPage() {
       duration: '4 Days',
       budget: '₹6.8 Lakhs',
       area: '180 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Ra20705_kitchen_stainless_steel.JPG',
+      image: getImageUrl('kitchen', 0),
       description: 'High-end modular kitchen with German hardware, granite countertops, and premium storage solutions.',
       features: ['German Hettich Hardware', 'Granite Countertops', 'Soft Close Mechanisms', 'Integrated Appliances']
     },
@@ -52,7 +53,7 @@ export default function ProjectsPage() {
       duration: '12 Days',
       budget: '₹18 Lakhs',
       area: '2500 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: getImageUrl('commercial', 0),
       description: 'Modern office interior with ergonomic workstations, meeting rooms, and brand integration elements.',
       features: ['Ergonomic Workstations', 'Glass Partition Walls', 'Conference Room Setup', 'Brand Color Integration']
     },
@@ -64,7 +65,7 @@ export default function ProjectsPage() {
       duration: '5 Days',
       budget: '₹4.2 Lakhs',
       area: '250 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/PAX_wardrobe_at_IKEA_Xihongmen_%2820150423113022%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.23 PM.jpeg',
       description: 'Elegant master bedroom with walk-in wardrobe, study unit, and ambient lighting design.',
       features: ['Walk-in Wardrobe', 'Study Unit with Storage', 'Ambient LED Lighting', 'Premium Laminates']
     },
@@ -76,7 +77,7 @@ export default function ProjectsPage() {
       duration: '6 Days',
       budget: '₹8.5 Lakhs',
       area: '400 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.24 PM (2).jpeg',
       description: 'Open-plan living room with custom entertainment unit, seating area, and designer false ceiling.',
       features: ['Custom Entertainment Unit', 'Sectional Sofa Set', 'Designer False Ceiling', 'Integrated Sound System']
     },
@@ -88,7 +89,7 @@ export default function ProjectsPage() {
       duration: '7 Days',
       budget: '₹5.8 Lakhs',
       area: '850 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.26 PM.jpeg',
       description: 'Space-optimized 2 BHK design with smart storage solutions and multi-functional furniture.',
       features: ['Space-Saving Kitchen', 'Foldable Dining Table', 'Multi-Storage Wardrobes', 'Compact Bathroom Design']
     },
@@ -100,7 +101,7 @@ export default function ProjectsPage() {
       duration: '5 Days',
       budget: '₹9.2 Lakhs',
       area: '220 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Ra20705_kitchen_stainless_steel.JPG',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.20 PM.jpeg',
       description: 'Luxury kitchen with central island, premium appliances, and sophisticated storage systems.',
       features: ['Central Kitchen Island', 'Premium Built-in Appliances', 'Wine Storage Unit', 'Quartz Countertops']
     },
@@ -112,7 +113,7 @@ export default function ProjectsPage() {
       duration: '10 Days',
       budget: '₹15 Lakhs',
       area: '1800 sq ft',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.28 PM (2).jpeg',
       description: 'Attractive retail space with product display units, customer seating area, and brand showcasing.',
       features: ['Custom Display Units', 'Product Showcase Lighting', 'Customer Lounge Area', 'Brand Wall Graphics']
     }
@@ -163,7 +164,7 @@ export default function ProjectsPage() {
             className="relative rounded-3xl overflow-hidden shadow-premium h-[500px] mb-12 group"
           >
             <Image
-              src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg"
+              src="/images/WhatsApp Image 2026-06-11 at 5.34.17 PM.jpeg"
               alt="Featured Project"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"

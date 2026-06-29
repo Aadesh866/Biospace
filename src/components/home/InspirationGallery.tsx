@@ -9,44 +9,44 @@ export default function InspirationGallery() {
   const items = [
     {
       title: 'Living Room',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.24 PM (1).jpeg',
       href: '/services/living-room',
       span: 'md:col-span-2 md:row-span-2'
     },
     {
       title: 'Master Bedroom',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/PAX_wardrobe_at_IKEA_Xihongmen_%2820150423113022%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.25 PM.jpeg',
       href: '/services/master-bedroom',
       span: 'md:col-span-1 md:row-span-1'
     },
     {
       title: 'False Ceiling',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.28 PM (2).jpeg',
       href: '/services/false-ceilings',
       span: 'md:col-span-1 md:row-span-1'
     },
     {
       title: 'Kitchen',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Ra20705_kitchen_stainless_steel.JPG',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.18 PM.jpeg',
       href: '/services/modular-kitchens',
       span: 'md:col-span-2 md:row-span-2'
     },
     {
       title: 'Wardrobe',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/PAX_wardrobe_at_IKEA_Xihongmen_%2820150423113022%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.26 PM (2).jpeg',
       href: '/services/custom-wardrobes',
       span: 'md:col-span-1 md:row-span-1'
     },
     {
       title: 'Renovation',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.27 PM.jpeg',
       href: '/services/complete-renovation',
       span: 'md:col-span-1 md:row-span-1'
     }
   ]
 
   return (
-    <section className="section-padding bg-brand-gray-50">
+    <section className="section-padding bg-brand-gray-100">
       <div className="container overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

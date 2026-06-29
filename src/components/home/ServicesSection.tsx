@@ -24,7 +24,7 @@ const ServicesSection = () => {
       icon: <ChefHat className="h-8 w-8" />,
       title: "Modular Kitchens",
       description: "Premium kitchens with German hardware, soft-close mechanisms, and 30-year warranty. Custom designs with islands, storage solutions, and integrated appliances.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/0/05/Ra20705_kitchen_stainless_steel.JPG",
+      image: "/images/WhatsApp Image 2026-06-11 at 5.30.18 PM.jpeg",
       priceRange: "₹2.5L - ₹8L",
       timeline: "3-5 Days",
       warranty: "30 Years",
@@ -40,7 +40,7 @@ const ServicesSection = () => {
       icon: <Bed className="h-8 w-8" />,
       title: "Custom Wardrobes",
       description: "Space-optimized wardrobes with smart compartments, sliding doors, LED lighting, and premium laminates. Perfect organization for every bedroom.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/2/26/PAX_wardrobe_at_IKEA_Xihongmen_%2820150423113022%29.jpg",
+      image: "/images/WhatsApp Image 2026-06-11 at 5.30.25 PM (1).jpeg",
       priceRange: "₹1.8L - ₹5L",
       timeline: "2-4 Days",
       warranty: "15 Years",
@@ -56,7 +56,7 @@ const ServicesSection = () => {
       icon: <Sofa className="h-8 w-8" />,
       title: "Living Room Design",
       description: "Complete entertainment and seating solutions with custom sofas, TV units, coffee tables, and ambient lighting for the perfect gathering space.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg",
+      image: "/images/WhatsApp Image 2026-06-11 at 5.30.24 PM (1).jpeg",
       priceRange: "₹2L - ₹6L",
       timeline: "4-6 Days",
       warranty: "10 Years",
@@ -72,7 +72,7 @@ const ServicesSection = () => {
       icon: <Lightbulb className="h-8 w-8" />,
       title: "False Ceilings",
       description: "Designer ceilings with integrated LED lighting, acoustic solutions, and modern aesthetics. Transform your room's ambiance completely.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg",
+      image: "/images/WhatsApp Image 2026-06-11 at 5.30.26 PM (1).jpeg",
       priceRange: "₹150 - ₹300/sqft",
       timeline: "2-3 Days",
       warranty: "10 Years",
@@ -88,7 +88,7 @@ const ServicesSection = () => {
       icon: <Home className="h-8 w-8" />,
       title: "Complete Renovation",
       description: "End-to-end home transformation including civil work, electrical, plumbing, flooring, painting, and all interior furniture in one package.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg",
+      image: "/images/WhatsApp Image 2026-06-11 at 5.30.27 PM.jpeg",
       priceRange: "₹3L - ₹16L/BHK",
       timeline: "7-14 Days",
       warranty: "15 Years",
@@ -104,7 +104,7 @@ const ServicesSection = () => {
       icon: <Building className="h-8 w-8" />,
       title: "Commercial Interiors",
       description: "Professional office spaces, retail stores, and showrooms with ergonomic design, brand integration, and productivity-focused layouts.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg",
+      image: "/images/WhatsApp Image 2026-06-11 at 5.30.28 PM.jpeg",
       priceRange: "Custom Quote",
       timeline: "5-15 Days",
       warranty: "10 Years",
@@ -158,7 +158,7 @@ const ServicesSection = () => {
           {/* Key Highlights */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             {highlights.map((highlight, index) => (
-              <motion.div whileHover={{ scale: 1.05 }} key={index} className="flex items-center space-x-3 bg-white/40 backdrop-blur-md border border-white/60 shadow-premium p-4 rounded-xl transition-all duration-300">
+              <motion.div whileHover={{ scale: 1.05 }} key={index} className="flex items-center space-x-3 bg-white/80 backdrop-blur-md border border-white shadow-md p-4 rounded-xl transition-all duration-300">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
                   {highlight.icon}
                 </div>
@@ -258,7 +258,7 @@ const ServicesSection = () => {
                   className="w-full group-hover:bg-brand-orange-500 group-hover:text-white group-hover:border-brand-orange-500 transition-all"
                   asChild
                 >
-                  <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -270,7 +270,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Service Process */}
-        <div className="bg-brand-gray-50 rounded-3xl p-8 md:p-12 mb-16">
+        <div className="bg-brand-gray-100 rounded-3xl p-8 md:p-12 mb-16">
           <div className="text-center mb-12">
             <h3 className="font-heading font-bold text-3xl mb-4 text-brand-gray-900">
               How It Works
@@ -311,7 +311,7 @@ const ServicesSection = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center relative"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-orange-500 text-white font-bold text-xl mb-4 shadow-glow group-hover:scale-110 transition-transform">
+                <div className="relative z-10 w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-orange-500 to-brand-orange-600 text-white flex items-center justify-center text-2xl font-bold font-heading mb-6 shadow-premium mx-auto group-hover:scale-110 transition-transform duration-300">
                   {process.step}
                 </div>
                 <h4 className="font-semibold text-lg text-brand-gray-900 mb-3">
@@ -323,7 +323,7 @@ const ServicesSection = () => {
                 
                 {/* Connection Line */}
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-brand-orange-200 -z-10">
+                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-brand-orange-200 z-0">
                     <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-brand-orange-200 rounded-full shadow-glow"></div>
                   </div>
                 )}
@@ -346,8 +346,10 @@ const ServicesSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
+                  variant="secondary"
                   asChild
-                  className="bg-white text-brand-orange-500 hover:bg-brand-gray-50 font-semibold"
+                  className="bg-white hover:bg-gray-100 font-semibold border-0"
+                  style={{ color: '#ea580c' }}
                 >
                   <Link href="/contact">
                     Get Free Consultation
@@ -358,7 +360,7 @@ const ServicesSection = () => {
                   size="lg" 
                   variant="outline"
                   asChild
-                  className="border-white text-white hover:bg-white hover:text-brand-orange-500 font-semibold"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-orange-500 font-semibold"
                 >
                   <Link href="/services">
                     View All Services

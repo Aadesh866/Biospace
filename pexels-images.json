@@ -1,0 +1,44 @@
+{
+  "kitchen": {
+    "url": "https://images.pexels.com/photos/7148841/pexels-photo-7148841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "photographer": "Souranshi Fashion and  Lifestyle Magazine",
+    "photographer_url": "https://www.pexels.com/@souranshi-fashion-and-lifestyle-magazine-2959920",
+    "alt": "Spacious and elegant modern kitchen interior featuring a dining area with stylish furniture."
+  },
+  "wardrobe": {
+    "url": "https://images.pexels.com/photos/35189675/pexels-photo-35189675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "photographer": "Rana Matloob Hussain",
+    "photographer_url": "https://www.pexels.com/@ranamatloob567",
+    "alt": "Elegant walk-in closet with glass doors, showcasing modern interior design and organized fashion storage."
+  },
+  "living": {
+    "url": "https://images.pexels.com/photos/6980724/pexels-photo-6980724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "photographer": "Max Vakhtbovych",
+    "photographer_url": "https://www.pexels.com/@artbovich",
+    "alt": "Contemporary room interior with couch and TV with black screen against tables under shiny chandelier in house"
+  },
+  "ceiling": {
+    "url": "https://images.pexels.com/photos/37982071/pexels-photo-37982071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "photographer": "-X Ray",
+    "photographer_url": "https://www.pexels.com/@x-ray-2161778651",
+    "alt": "A stunning view of a geometric dome ceiling showcasing intricate architectural design and lighting."
+  },
+  "renovation": {
+    "url": "https://images.pexels.com/photos/36035073/pexels-photo-36035073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "photographer": "Valentin Ivantsov",
+    "photographer_url": "https://www.pexels.com/@valentin-ivantsov-2154772556",
+    "alt": "Spacious kitchen under renovation with ladder and tools, showcasing a fresh new design."
+  },
+  "commercial": {
+    "url": "https://images.pexels.com/photos/7511755/pexels-photo-7511755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "photographer": "Max Vakhtbovych",
+    "photographer_url": "https://www.pexels.com/@artbovich",
+    "alt": "Geometric decoration on wall with Innovation inscription near glass door of conference room with colorful stickers in hallway of office building"
+  },
+  "bedroom": {
+    "url": "https://images.pexels.com/photos/6903157/pexels-photo-6903157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "photographer": "Max Vakhtbovych",
+    "photographer_url": "https://www.pexels.com/@artbovich",
+    "alt": "Interior design of modern bedroom with unmade bed under luminous lamps at sunlight"
+  }
+}

@@ -10,7 +10,13 @@
     "analyze": "ANALYZE=true npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "images:fetch": "node scripts/fetch-pexels-images.js",
+    "images:verify": "node scripts/verify-all-images.js",
+    "images:check": "node check-urls.js",
+    "images:validate": "node scripts/validate-pipeline.js",
+    "images:analyze": "node scripts/context-aware-image-replacement.js",
+    "images:replace": "node scripts/context-aware-image-replacement.js --apply"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

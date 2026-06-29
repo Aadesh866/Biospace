@@ -12,19 +12,19 @@ export default function HeroSection() {
   
   const slides = [
     {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.18 PM.jpeg',
       title: 'Your Dream Home, Delivered in Under a Week',
       subtitle: 'Premium interior design with 30-year warranty on kitchens',
       highlight: '24-48 Hour Site Visits'
     },
     {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/22_West_-_home_office.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.30.19 PM.jpeg',
       title: 'Modular Kitchens That Last Decades',
       subtitle: 'German hardware and premium materials with unmatched 30-year warranty',
       highlight: '30 Year Kitchen Warranty'
     },
     {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Living_room_%28Unsplash%29.jpg',
+      image: '/images/WhatsApp Image 2026-06-11 at 5.34.17 PM.jpeg',
       title: 'Complete Home Makeovers',
       subtitle: 'From modular kitchens to full renovations - we handle everything A to Z',
       highlight: 'End-to-End Solutions'
@@ -208,12 +208,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
+
     </section>
   )
 }

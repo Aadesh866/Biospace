@@ -110,7 +110,7 @@ const WhyChooseUs = () => {
   ]
 
   return (
-    <section className="section-padding bg-brand-gray-50">
+    <section className="section-padding bg-brand-gray-100">
       <div className="container">
         {/* Header */}
         <motion.div 
@@ -120,7 +120,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-brand-gray-900">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4 text-brand-gray-900">
             Why Choose <span className="gradient-text">BIOSPACE?</span>
           </h2>
           <p className="text-xl text-brand-gray-600 leading-relaxed">
@@ -141,18 +141,20 @@ const WhyChooseUs = () => {
             >
               <Card className="group border border-brand-gray-200 shadow-sm hover:shadow-2xl transition-all duration-300 h-full hover:-translate-y-2">
               <CardContent className="p-8">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${feature.bgColor} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className={feature.color}>
-                    {feature.icon}
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="font-heading font-bold text-xl mb-2 text-brand-gray-900">
+                      {feature.title}
+                    </h3>
+                    <div className={`font-semibold text-lg ${feature.color}`}>
+                      {feature.highlight}
+                    </div>
                   </div>
-                </div>
-                
-                <h3 className="font-heading font-bold text-xl mb-2 text-brand-gray-900">
-                  {feature.title}
-                </h3>
-                
-                <div className={`font-semibold text-lg mb-4 ${feature.color}`}>
-                  {feature.highlight}
+                  <div className={`inline-flex items-center justify-center w-14 h-14 flex-shrink-0 rounded-2xl ${feature.bgColor} group-hover:scale-110 transition-transform duration-300 ml-4`}>
+                    <div className={feature.color}>
+                      {feature.icon}
+                    </div>
+                  </div>
                 </div>
                 
                 <p className="text-brand-gray-600 mb-4 leading-relaxed">
@@ -170,7 +172,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Achievements Section */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-20">
+        <div className="bg-brand-gray-100 rounded-3xl p-8 md:p-12 shadow-[0_4px_16px_rgba(0,0,0,0.08)] mb-20">
           <div className="text-center mb-12">
             <h3 className="font-heading font-bold text-3xl mb-4 text-brand-gray-900">
               Proven Track Record
@@ -183,7 +185,11 @@ const WhyChooseUs = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
-              <motion.div whileHover={{ scale: 1.05 }} key={index} className="text-center group bg-white/40 backdrop-blur-md border border-white/60 shadow-premium p-6 rounded-2xl transition-all duration-300">
+              <motion.div 
+                whileHover={{ scale: 1.05, boxShadow: '0 12px 32px rgba(0,0,0,0.12)' }} 
+                key={index} 
+                className="text-center group bg-white border-2 border-brand-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] p-6 rounded-2xl transition-all duration-300"
+              >
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-brand-orange-100 text-brand-orange-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {achievement.icon}
                 </div>
@@ -250,8 +256,10 @@ const WhyChooseUs = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
+                variant="secondary"
                 asChild
-                className="bg-white text-brand-orange-500 hover:bg-brand-gray-50 font-semibold"
+                className="bg-white hover:bg-gray-100 font-semibold border-0"
+                style={{ color: '#ea580c' }}
               >
                 <Link href="/contact" className="flex items-center">
                   Get Free Quote
@@ -263,7 +271,7 @@ const WhyChooseUs = () => {
                 size="lg" 
                 variant="outline"
                 asChild
-                className="border-white text-white hover:bg-white hover:text-brand-orange-500 font-semibold"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-orange-600 font-semibold"
               >
                 <a 
                   href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20schedule%20a%20site%20visit%20within%2024-48%20hours"

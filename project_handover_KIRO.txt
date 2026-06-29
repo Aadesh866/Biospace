@@ -1,0 +1,50 @@
+# BioSpace Interiors - Project History & Handover Document for KIRO
+
+This document details all the changes, features, and troubleshooting steps executed on the BioSpace Interiors project since its inception. Please read this carefully to understand the current state of the codebase.
+
+## 1. Initial Project Setup & Architecture
+- Initialized a Next.js (App Router) project with Tailwind CSS and TypeScript.
+- Created the core UI components using standard modern web design practices.
+- Set up a dynamic routing structure:
+  - `/` (Home page)
+  - `/about` (About us)
+  - `/services` (List of all services)
+  - `/services/[id]` (Detailed service pages)
+  - `/projects` (Portfolio of projects)
+  - `/projects/[id]` (Detailed project pages)
+
+## 2. UI & UX Enhancements
+Based on user feedback, the following aesthetic changes were made:
+- **Hero Section**: Removed the distracting "mouse scroll" icon.
+- **Card Aesthetics**: The user complained that cards looked "plain white". Added subtle gray background colors to the sections, and applied default soft shadows (`shadow-md`, `hover:shadow-xl`) to all service and project cards to give them depth.
+- **Section Transitions**: Implemented alternating background colors (white and light gray `bg-gray-100`) between sections (e.g., between "One-stop shop" and "Inspiration Gallery") to break up the monotonous white background.
+
+## 3. The Image Alignment Crisis (The Root Cause Issue)
+A significant amount of time was spent trying to align the images to their specific contexts (e.g., ensuring "Custom Wardrobes" showed a wardrobe, not a living room).
+
+### What Happened:
+1. **Initial State**: The site used dummy placeholder images that repeated across different sections. The user requested context-specific images (e.g., false ceiling image for the false ceiling section).
+2. **First Attempt (Wikipedia API)**: We tried fetching images from Wikimedia Commons using search terms. This failed because Wikipedia Commons is excellent for landmarks (e.g., "Taj Mahal") but terrible for common nouns (e.g., "Modular Kitchen"). It returned irrelevant historical photos or diagrams.
+3. **Second Attempt (Unsplash Replacements)**: We wrote a script (`clean-images.js`) to replace all Wikipedia URLs with premium Unsplash URLs.
+4. **The Critical Error**: The script used a "blind positional replacement" (round-robin). It looped through the codebase and assigned Unsplash images sequentially, completely ignoring the context. This caused "Custom Wardrobes" to display a living room, and "False Ceilings" to display a lamp.
+5. **Broken Links**: On top of the misalignment, 3 of the Unsplash IDs used in the codebase (`photo-1556910103190-2d9226164233`, `photo-1595526114101-1b297b4b39b3`, `photo-1581858326456-6164fb0b7af0`) started returning 404 (Broken Links), causing images to not load at all.
+
+### The Scripts Created (Now Obsolete):
+Several Node.js scripts were created in the root directory to fix this, including `fetch-wiki.js`, `fix-all-images.js`, `clean-images.js`, `fetch-category-images.js`, etc. These documented the attempts to fetch working images.
+
+## 4. The Solution & Current State
+During a deep audit, we discovered **23 highly premium, authentic interior design photographs** sitting completely unused in the `public/images/` and `images/` directory. These are WhatsApp photos uploaded by the user at the very beginning of the project.
+
+These local photos include:
+- Beautiful L-shaped modular kitchens with false ceilings (`WhatsApp Image ... 5.30.18 PM.jpeg`)
+- Luxury kitchen islands
+- Ornate Pooja rooms with backlit LED panels
+- Modern living rooms with marble TV units and fluted panels
+- Bedrooms with tropical art and false ceilings
+- 3D isometric cutaway floor plans
+
+## 5. Next Steps for KIRO
+1. **DO NOT generate images.** The user explicitly forbade generating images.
+2. **DO NOT fetch images from Wikipedia.** It does not work for interior design.
+3. **DO NOT rely on Unsplash IDs.** They are opaque and frequently break (404).
+4. **ACTION REQUIRED**: You need to implement the fix. Map the local WhatsApp images found in `public/images/` to the components (`ServicesSection.tsx`, `InspirationGallery.tsx`, `OneStopShopSection.tsx`, etc.). Create a centralized mapping file (e.g., `src/lib/image-map.ts`) and use the local `/images/WhatsApp...` paths so the images load instantly, never 404, and perfectly match the Indian interior design context requested by the user.
